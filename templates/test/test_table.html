@@ -1,0 +1,50 @@
+{% extends "table.html" %}
+{% block title %} 表格使用 {% endblock %}
+{% block titlecontent %}
+<p>
+	Hi !
+</p>
+{% endblock %}
+
+{% block tablecontent %}
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>NO.</th>
+			<th>TD1</th>
+			<th>TD2</th>
+			<th>TD3</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>^_^</td>
+			<td>→_→</td>
+			<td>^o^</td>
+		</tr>
+	</tbody>
+</table>
+{% endblock %}
+
+{% block footcontent %}
+<ul class="pager">
+	<li><a href="javascript:toPre({{pageNum}})">Previous</a></li>
+	<li><a href="javascript:toNext({{pageNum}},{{p.num_pages}})">Next</a></li>
+</ul>
+<script type="text/javascript">
+function toPre(pageNum){
+	if(pageNum - 1 == 0){
+		return;
+	}
+	window.location.href = "/?page_num=" + (pageNum - 1);
+}
+
+function toNext(pageNum, pageCount){
+	if(pageNum == pageCount){
+		return;
+	}
+	window.location.href = "/?page_num=" + (pageNum + 1);
+}
+</script>
+{% endblock %}
