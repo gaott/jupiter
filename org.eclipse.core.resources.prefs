@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//template/StartUp.py=utf-8
+encoding//template/TestView.py=utf-8
+encoding//template/conf/ConfigUtil.py=utf-8
+encoding//template/logger.py=utf-8
+encoding//template/utils/DBUtil.py=utf-8
+encoding//template/utils/ParamUtil.py=utf-8
+encoding//template/utils/QueryStringUtil.py=utf-8
+encoding/django_wsgi.py=utf-8
