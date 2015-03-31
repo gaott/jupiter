@@ -2,7 +2,7 @@
 '''
 Created on 2014年10月12日
 
-@author: gtt
+@author: gaott
 '''
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render_to_response

@@ -14,8 +14,8 @@ def start():
     
     from DBUtils.PooledDB import PooledDB
     import MySQLdb
-    from template.conf import ConfigUtil
-    from template.utils.ParamUtil import getParamDict
+    from jupiter.conf import ConfigUtil
+    from jupiter.utils.ParamUtil import getParamDict
     
     connParams = getParamDict(ConfigUtil.CONN_STRING)
     username = connParams.get('user')

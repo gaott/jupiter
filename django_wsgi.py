@@ -8,9 +8,9 @@ Created on 2014年7月5日
 import os
 import django.core.handlers.wsgi
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'template.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'jupiter.settings'
 application = django.core.handlers.wsgi.WSGIHandler()
 
 #初始化数据库链接
-#from template.StartUp import start
+#from jupiter.StartUp import start
 #start()

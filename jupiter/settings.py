@@ -1,5 +1,5 @@
 """
-Django settings for template project.
+Django settings for jupiter project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -46,9 +46,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'template.urls'
+ROOT_URLCONF = 'jupiter.urls'
 
-WSGI_APPLICATION = 'template.wsgi.application'
+WSGI_APPLICATION = 'jupiter.wsgi.application'
 
 
 # Database
@@ -91,6 +91,6 @@ STATICFILES_FINDERS = (
 )
 
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
+    'django.jupiter.loaders.filesystem.Loader',
+    'django.jupiter.loaders.app_directories.Loader',
 )

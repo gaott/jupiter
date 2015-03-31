@@ -2,14 +2,13 @@
 '''
 Created on 2014年10月1日
 
-@author: gaomh
+@author: gaott
 '''
 import datetime
 import logging
 import subprocess
 from urllib2 import URLError
 import urllib2
-
 
 def getResult(url):
     result = ''

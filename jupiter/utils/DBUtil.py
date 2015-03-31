@@ -1,10 +1,18 @@
-#encoding=utf-8
+# -*- coding: utf-8 -*-  
 
-from template.conf.ConfigUtil import CONNECTION_POOL
-from template.logger import loggerDaily
+'''
+Created on 2013-7-3
+
+@author: gaott
+'''
+from jupiter.conf.ConfigUtil import CONNECTION_POOL
+from jupiter.logger import loggerDaily
 
 LOGGER = loggerDaily
 
+'''
+执行SQL，用于insert,update,delete
+'''
 def executeOpt(sqlStr, *params):
     conn = CONNECTION_POOL.connection()
     param = []
@@ -23,7 +31,9 @@ def executeOpt(sqlStr, *params):
         cursor.close()
         conn.close()
     return count
-
+'''
+执行SQL，用于select
+'''
 def getSqlResult(sqlStr, *params):
     conn = CONNECTION_POOL.connection()
     param = []
@@ -42,6 +52,9 @@ def getSqlResult(sqlStr, *params):
         conn.close()
     return result
 
+'''
+用于事务操作
+'''
 def executeTransactionSqls(sqls):
     if not sqls :
         return

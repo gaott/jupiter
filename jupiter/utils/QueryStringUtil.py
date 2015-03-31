@@ -28,6 +28,9 @@ def creatQueryString(params):
     
     return '&'.join(l)
 
+'''
+将一个Dict按照Key字母升序构成一个QueryString. 并且加入时间混淆的hash串
+'''
 def createHashQueryString(params, salt, currentTime):
     paramStr = creatQueryString(params)
     
@@ -45,6 +48,9 @@ def createHashQueryString(params, salt, currentTime):
     
     return htqs
 
+'''
+验证参数是否合法
+'''
 def validateQueryDict(params, timeTolerate, salt):
     hashStr = params.pop('hash')
     queryTime = long(params.pop('time'))
@@ -59,7 +65,9 @@ def validateQueryDict(params, timeTolerate, salt):
         return False
     
     return True 
-
+'''
+将一个QueryString转化为Dict
+'''
 def getQueryDict(paramStr):
     params = {}
     paramList = paramStr.split('&')

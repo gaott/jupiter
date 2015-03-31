@@ -6,7 +6,6 @@ Created on 2013-7-23
 '''
 import urllib
 
-
 def getParamDict(paramStr):
     params = {}
     paramList = paramStr.split('&')

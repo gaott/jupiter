@@ -2,8 +2,8 @@ from django.conf.urls import patterns, include
 from django.contrib import admin
 from django.contrib.auth import login, logout
 
-from template import settings
-from template.TestView import testTable
+from jupiter import settings
+from jupiter.TestView import testTable
 
 
 admin.autodiscover()
