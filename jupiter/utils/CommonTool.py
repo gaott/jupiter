@@ -10,7 +10,7 @@ import subprocess
 from urllib2 import URLError
 import urllib2
 
-def getResult(url):
+def httpRetrieve(url):
     result = ''
     try:
         req = urllib2.Request(url)
